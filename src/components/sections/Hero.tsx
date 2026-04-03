@@ -28,9 +28,8 @@ export default function Hero() {
         className="text-lg md:text-xl leading-relaxed max-w-2xl mb-12"
         style={{ color: "var(--muted)" }}
       >
-        I help B2B companies design, implement and optimize their revenue
-        operations — from HubSpot setup to AI-powered outbound. Six years,
-        20+ clients, one focus: growth that compounds.
+        Helping B2B companies scale through streamlined commercial operations.
+        Six years of clients and use cases — one focus. Growth that compounds.
       </p>
 
       {/* CTAs */}
