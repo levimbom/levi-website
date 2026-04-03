@@ -3,10 +3,10 @@ import Link from "next/link";
 const services = [
   {
     tag: "One-time",
-    name: "Blueprint",
-    tagline: "Know exactly what to build before you build it.",
+    name: "Process",
+    tagline: "Design your commercial engine before you build it.",
     description:
-      "I map your full commercial process — from first touch to closed deal to expansion — and design the exact system you need inside HubSpot. You get a clear, visual blueprint before a single thing is built.",
+      "I map your full commercial process — from first touch to closed deal to expansion — and design the exact system your business needs. You leave with a clear, visual blueprint before a single thing is built.",
     includes: [
       "Customer journey mapping",
       "Lifecycle stage & qualification logic",
@@ -15,7 +15,7 @@ const services = [
       "HubSpot licensing recommendation",
     ],
     price: "From €2,500",
-    cta: "Start with a blueprint",
+    cta: "Start here",
   },
   {
     tag: "One-time",
@@ -36,36 +36,35 @@ const services = [
     featured: true,
   },
   {
-    tag: "Retainer",
-    name: "GTM Engine",
-    tagline: "A predictable outbound machine, powered by AI.",
+    tag: "One-time",
+    name: "Connect",
+    tagline: "HubSpot as your single source of commercial truth.",
     description:
-      "I run your outbound operation end-to-end — enrichment, targeting, sequencing, and reporting. Built on Clay, Apollo, HeyReach, and Instantly, fully integrated with HubSpot.",
+      "I wire HubSpot to your full tech stack — ERP, product data, BI tools, and more. Every system talks to each other, your data stays clean, and your reporting reflects reality.",
     includes: [
-      "ICP definition & signal-based targeting",
-      "AI enrichment via Clay",
-      "LinkedIn outreach via HeyReach",
-      "Email outreach via Apollo + Instantly",
-      "HubSpot integration & reporting",
-      "Monthly performance reviews",
+      "ERP integrations (NetSuite, AFAS, CNS)",
+      "Product & usage data (Postgres, PostHog, ClickHouse)",
+      "Data sync via Polytomic or custom API",
+      "Custom objects & associations",
+      "Data quality dashboards",
     ],
-    price: "From €3,000/mo",
-    cta: "Learn more",
+    price: "Custom",
+    cta: "Discuss your stack",
   },
   {
     tag: "Retainer",
-    name: "Optimize",
-    tagline: "Keep your system growing with your business.",
+    name: "Scale",
+    tagline: "A managed growth engine — outbound and optimisation.",
     description:
-      "Ongoing RevOps support as you scale — pipeline improvements, conversion optimization, automation expansion, and reporting. Your system gets better every month.",
+      "I run your outbound operation and continuously improve your RevOps setup. AI enrichment, sequencing, pipeline reviews, and automation expansion — everything compounds month over month.",
     includes: [
+      "Signal-based targeting & AI enrichment via Clay",
+      "LinkedIn outreach via HeyReach",
+      "Email outreach via Apollo + Instantly",
       "Monthly pipeline & conversion reviews",
-      "Automation expansion",
-      "Reporting improvements",
-      "New market / team onboarding",
-      "Priority support",
+      "Automation expansion & reporting improvements",
     ],
-    price: "From €2,000/mo",
+    price: "From €3,000/mo",
     cta: "Learn more",
   },
 ];
@@ -168,30 +167,6 @@ export default function Services() {
         ))}
       </div>
 
-      {/* Add-on note */}
-      <div
-        className="mt-6 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
-        style={{
-          backgroundColor: "var(--card)",
-          border: "1px solid var(--border)",
-        }}
-      >
-        <div>
-          <p className="text-sm font-semibold mb-1" style={{ color: "var(--foreground)" }}>
-            + Connect add-on
-          </p>
-          <p className="text-sm" style={{ color: "var(--muted)" }}>
-            Need to wire HubSpot to your ERP, product data, or BI tools? I integrate your full commercial tech stack — NetSuite, AFAS, Postgres, PostHog, and more.
-          </p>
-        </div>
-        <Link
-          href="/contact"
-          className="shrink-0 text-sm font-medium"
-          style={{ color: "var(--foreground)" }}
-        >
-          Ask about it →
-        </Link>
-      </div>
     </section>
   );
 }

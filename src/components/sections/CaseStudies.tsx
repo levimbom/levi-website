@@ -17,7 +17,7 @@ const placeholders = [
   {
     client: "Post-Series A Startup",
     result: "Outbound system generating 30+ qualified meetings/month",
-    service: "GTM Engine",
+    service: "Scale",
     industry: "SaaS",
   },
 ];

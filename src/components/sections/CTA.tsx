@@ -27,8 +27,8 @@ export default function CTA() {
             className="text-lg mb-10 max-w-md mx-auto"
             style={{ color: "var(--muted)" }}
           >
-            Start with a Blueprint session — 2–3 focused sessions to design the
-            exact system your business needs.
+            Start with a Process session — 2–3 focused sessions to design the
+            exact commercial engine your business needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -36,7 +36,7 @@ export default function CTA() {
               className="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium transition-opacity hover:opacity-80"
               style={{ backgroundColor: "var(--accent)", color: "#080808" }}
             >
-              Book a Blueprint session
+              Book a Process session
             </Link>
             <Link
               href="https://www.linkedin.com/in/levibom/"
