@@ -30,21 +30,27 @@ export default function About() {
           </h2>
           <div className="flex flex-col gap-4 text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
             <p>
-              I&apos;m Levi Bom, a RevOps and GTM specialist based in Amsterdam.
-              For the past six years I&apos;ve been helping B2B companies — from
-              fast-growing SaaS startups to manufacturing businesses and financial
-              service providers — build commercial operations that actually support growth.
+              I started out running a software sales company — which meant figuring
+              out pipeline management and when to pivot sales strategy the hard way,
+              in the trenches. That hands-on experience with what actually moves deals
+              forward shaped everything that came after.
             </p>
             <p>
-              My work sits at the intersection of strategy and execution. I
-              don&apos;t just design systems — I build them, integrate them, and
-              make sure teams actually use them. The result is a CRM that
-              drives your business forward instead of slowing it down.
+              From there I joined Growth Tribe, where growth marketing and GTM strategy
+              became part of the daily conversation. I got obsessed with the question
+              of how commercial teams are built, not just how they sell.
             </p>
             <p>
-              I work with a small team of specialists — integrations, design,
-              data enrichment — brought in depending on what a project needs.
-              No bloated agency overhead, just the right people for the job.
+              RevOps was the natural destination — the place where sales, marketing,
+              and operations finally talk to each other. I combined everything I&apos;d
+              learned and started helping companies build the commercial infrastructure
+              that lets them actually accelerate: clean data, tight processes, and
+              systems that scale with the business.
+            </p>
+            <p>
+              My biggest strength is creating structure in chaos — finding the signal
+              in a messy commercial operation and designing something that makes sense
+              of it, fast.
             </p>
           </div>
         </div>
