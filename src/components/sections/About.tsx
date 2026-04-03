@@ -52,6 +52,16 @@ export default function About() {
               in a messy commercial operation and designing something that makes sense
               of it, fast.
             </p>
+            <p>
+              Past clients include{" "}
+              <strong style={{ color: "var(--foreground)" }}>Alibaba</strong>,{" "}
+              <strong style={{ color: "var(--foreground)" }}>Dopper</strong>,{" "}
+              <strong style={{ color: "var(--foreground)" }}>Blacksmith</strong>,{" "}
+              <strong style={{ color: "var(--foreground)" }}>GetShaman</strong>,{" "}
+              <strong style={{ color: "var(--foreground)" }}>Opticon</strong>,{" "}
+              <strong style={{ color: "var(--foreground)" }}>RVDB</strong>,{" "}
+              and many more across SaaS, manufacturing, and financial services.
+            </p>
           </div>
         </div>
 

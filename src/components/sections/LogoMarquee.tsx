@@ -17,10 +17,13 @@ const companies = [
   "Fundaments",
   "Holistic Movement",
   "DSe Natuursteen",
+  "HelloDialog",
+  "Hely",
+  "Mailcamp",
 ];
 
-// Duplicate for seamless loop
-const allCompanies = [...companies, ...companies];
+// Triplicate for an endless feel
+const allCompanies = [...companies, ...companies, ...companies];
 
 export default function LogoMarquee() {
   return (
@@ -32,30 +35,51 @@ export default function LogoMarquee() {
         Trusted by
       </p>
 
-      {/* Marquee wrapper — clips overflow and fades edges */}
+      {/* Row 1 — left to right */}
       <div
-        className="relative overflow-hidden"
+        className="relative overflow-hidden mb-4"
         style={{
           maskImage:
-            "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
+            "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
           WebkitMaskImage:
-            "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
+            "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
         }}
       >
         <div
-          className="flex gap-12 w-max"
-          style={{
-            animation: "marquee 30s linear infinite",
-          }}
+          className="flex gap-14 w-max"
+          style={{ animation: "marquee-left 40s linear infinite" }}
         >
           {allCompanies.map((name, i) => (
             <span
               key={i}
               className="text-sm font-medium whitespace-nowrap"
-              style={{
-                color: "rgba(255,255,255,0.22)",
-                letterSpacing: "0.03em",
-              }}
+              style={{ color: "rgba(255,255,255,0.2)", letterSpacing: "0.03em" }}
+            >
+              {name}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Row 2 — right to left, offset so they don't sync */}
+      <div
+        className="relative overflow-hidden"
+        style={{
+          maskImage:
+            "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
+        }}
+      >
+        <div
+          className="flex gap-14 w-max"
+          style={{ animation: "marquee-right 35s linear infinite" }}
+        >
+          {[...allCompanies].reverse().map((name, i) => (
+            <span
+              key={i}
+              className="text-sm font-medium whitespace-nowrap"
+              style={{ color: "rgba(255,255,255,0.2)", letterSpacing: "0.03em" }}
             >
               {name}
             </span>
@@ -64,9 +88,13 @@ export default function LogoMarquee() {
       </div>
 
       <style>{`
-        @keyframes marquee {
+        @keyframes marquee-left {
           from { transform: translateX(0); }
-          to   { transform: translateX(-50%); }
+          to   { transform: translateX(-33.333%); }
+        }
+        @keyframes marquee-right {
+          from { transform: translateX(-33.333%); }
+          to   { transform: translateX(0); }
         }
       `}</style>
     </div>
