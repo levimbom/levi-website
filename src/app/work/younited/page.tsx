@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const details = [
   { label: "Client", value: "Younited" },
-  { label: "Industry", value: "SaaS · Freelance platform" },
+  { label: "Industry", value: "Financial Services · SaaS" },
   { label: "Service", value: "Build" },
   { label: "Result", value: "Aligned sales team, real-time reporting, full marketing automation" },
 ];
@@ -39,9 +39,31 @@ export default function YounitedCase() {
           className="absolute inset-0"
           style={{ background: "linear-gradient(to top, rgba(6,9,6,0.9) 0%, transparent 60%)" }}
         />
+        {/* Large watermark name */}
+        <div
+          className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
+          aria-hidden="true"
+        >
+          <span
+            className="text-[clamp(80px,15vw,160px)] font-black tracking-tighter leading-none whitespace-nowrap"
+            style={{
+              background: "linear-gradient(135deg, rgba(74,222,128,0.18) 0%, rgba(74,222,128,0.04) 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              textShadow: "none",
+            }}
+          >
+            Younited
+          </span>
+        </div>
+
         <div className="relative z-10">
-          <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#4ade80" }}>
-            Build · SaaS
+          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "#4ade80" }}>
+            Build · Financial Services
+          </p>
+          <p className="text-2xl font-black tracking-tight mb-1" style={{ color: "#4ade80", textShadow: "0 0 40px rgba(74,222,128,0.5)" }}>
+            Younited
           </p>
           <h1 className="text-3xl md:text-4xl font-bold" style={{ color: "var(--foreground)" }}>
             From limited CRM to a scalable sales engine

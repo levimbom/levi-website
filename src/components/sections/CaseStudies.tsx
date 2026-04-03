@@ -5,7 +5,7 @@ export const cases = [
   {
     slug: "younited",
     client: "Younited",
-    industry: "SaaS · Freelance platform",
+    industry: "Financial Services · SaaS",
     service: "Build",
     headline: "From limited CRM to a scalable sales engine",
     summary:

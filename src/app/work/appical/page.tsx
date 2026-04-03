@@ -39,9 +39,30 @@ export default function AppicalCase() {
           className="absolute inset-0"
           style={{ background: "linear-gradient(to top, rgba(8,6,10,0.9) 0%, transparent 60%)" }}
         />
+        {/* Large watermark name */}
+        <div
+          className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
+          aria-hidden="true"
+        >
+          <span
+            className="text-[clamp(80px,15vw,160px)] font-black tracking-tighter leading-none whitespace-nowrap"
+            style={{
+              background: "linear-gradient(135deg, rgba(167,139,250,0.18) 0%, rgba(167,139,250,0.04) 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            Appical
+          </span>
+        </div>
+
         <div className="relative z-10">
-          <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#a78bfa" }}>
+          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "#a78bfa" }}>
             Process + Build · SaaS
+          </p>
+          <p className="text-2xl font-black tracking-tight mb-1" style={{ color: "#a78bfa", textShadow: "0 0 40px rgba(167,139,250,0.5)" }}>
+            Appical
           </p>
           <h1 className="text-3xl md:text-4xl font-bold" style={{ color: "var(--foreground)" }}>
             A full reset that unlocked real growth

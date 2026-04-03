@@ -48,9 +48,30 @@ export default function WerktijdenCase() {
           className="absolute inset-0"
           style={{ background: "linear-gradient(to top, rgba(10,7,2,0.92) 0%, transparent 60%)" }}
         />
+        {/* Large watermark name */}
+        <div
+          className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
+          aria-hidden="true"
+        >
+          <span
+            className="text-[clamp(60px,11vw,130px)] font-black tracking-tighter leading-none whitespace-nowrap"
+            style={{
+              background: "linear-gradient(135deg, rgba(251,146,60,0.18) 0%, rgba(251,146,60,0.04) 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            Werktijden.nl
+          </span>
+        </div>
+
         <div className="relative z-10">
-          <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#fb923c" }}>
+          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "#fb923c" }}>
             Process + Build + Adopt · SaaS
+          </p>
+          <p className="text-2xl font-black tracking-tight mb-1" style={{ color: "#fb923c", textShadow: "0 0 40px rgba(251,146,60,0.5)" }}>
+            Werktijden.nl
           </p>
           <h1 className="text-3xl md:text-4xl font-bold max-w-2xl" style={{ color: "var(--foreground)" }}>
             From scattered commercial process to a CRM the team actually uses
