@@ -54,23 +54,6 @@ export default function Hero() {
         </Link>
       </div>
 
-      {/* Client logos */}
-      <div className="mt-20">
-        <p className="text-xs uppercase tracking-widest mb-6" style={{ color: "var(--muted)" }}>
-          Trusted by
-        </p>
-        <div className="flex flex-wrap gap-x-10 gap-y-4 items-center">
-          {["Alibaba", "Blacksmith", "Dopper", "RVDB", "Growth Tribe"].map((name) => (
-            <span
-              key={name}
-              className="text-sm font-medium"
-              style={{ color: "rgba(255,255,255,0.25)" }}
-            >
-              {name}
-            </span>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }

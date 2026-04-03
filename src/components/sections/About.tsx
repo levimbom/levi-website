@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const stats = [
   { value: "6", label: "Years in RevOps" },
   { value: "20+", label: "Clients helped" },
@@ -48,28 +50,45 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right — stats */}
-        <div className="grid grid-cols-2 gap-4">
-          {stats.map((s) => (
-            <div
-              key={s.label}
-              className="rounded-2xl p-6"
-              style={{
-                backgroundColor: "var(--card)",
-                border: "1px solid var(--border)",
-              }}
-            >
-              <p
-                className="text-4xl font-bold mb-2"
-                style={{ color: "var(--accent)" }}
+        {/* Right — photo + stats */}
+        <div className="flex flex-col gap-4">
+          {/* Headshot */}
+          <div
+            className="rounded-2xl overflow-hidden w-full aspect-[4/3] relative"
+            style={{ border: "1px solid var(--border)" }}
+          >
+            <Image
+              src="/profile.jpg"
+              alt="Levi Bom"
+              fill
+              className="object-cover object-top"
+              priority
+            />
+          </div>
+
+          {/* Stats grid */}
+          <div className="grid grid-cols-2 gap-4">
+            {stats.map((s) => (
+              <div
+                key={s.label}
+                className="rounded-2xl p-6"
+                style={{
+                  backgroundColor: "var(--card)",
+                  border: "1px solid var(--border)",
+                }}
               >
-                {s.value}
-              </p>
-              <p className="text-sm" style={{ color: "var(--muted)" }}>
-                {s.label}
-              </p>
-            </div>
-          ))}
+                <p
+                  className="text-3xl font-bold mb-1"
+                  style={{ color: "var(--accent)" }}
+                >
+                  {s.value}
+                </p>
+                <p className="text-xs leading-snug" style={{ color: "var(--muted)" }}>
+                  {s.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
