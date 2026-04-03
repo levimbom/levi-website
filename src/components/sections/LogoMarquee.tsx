@@ -20,6 +20,8 @@ const companies = [
   "HelloDialog",
   "Hely",
   "Mailcamp",
+  "Younited",
+  "Appical",
 ];
 
 // Triplicate for an endless feel

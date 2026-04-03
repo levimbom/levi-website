@@ -56,6 +56,8 @@ export default function About() {
               Past clients include{" "}
               <strong style={{ color: "var(--foreground)" }}>Alibaba</strong>,{" "}
               <strong style={{ color: "var(--foreground)" }}>Dopper</strong>,{" "}
+              <strong style={{ color: "var(--foreground)" }}>Younited</strong>,{" "}
+              <strong style={{ color: "var(--foreground)" }}>Appical</strong>,{" "}
               <strong style={{ color: "var(--foreground)" }}>Blacksmith</strong>,{" "}
               <strong style={{ color: "var(--foreground)" }}>GetShaman</strong>,{" "}
               <strong style={{ color: "var(--foreground)" }}>Opticon</strong>,{" "}

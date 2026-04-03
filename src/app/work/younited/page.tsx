@@ -1,0 +1,136 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Younited — Levi Bom",
+  description: "How we migrated Younited to HubSpot and built a scalable sales engine from the ground up.",
+};
+
+const details = [
+  { label: "Client", value: "Younited" },
+  { label: "Industry", value: "SaaS · Freelance platform" },
+  { label: "Service", value: "Build" },
+  { label: "Result", value: "Aligned sales team, real-time reporting, full marketing automation" },
+];
+
+export default function YounitedCase() {
+  return (
+    <article className="pt-36 pb-24 px-6 md:px-12 max-w-6xl mx-auto">
+      {/* Back */}
+      <Link
+        href="/work"
+        className="inline-flex items-center gap-2 text-sm mb-12 transition-opacity hover:opacity-70"
+        style={{ color: "var(--muted)" }}
+      >
+        ← All work
+      </Link>
+
+      {/* Hero block */}
+      <div
+        className="rounded-3xl h-64 mb-12 flex items-end p-10"
+        style={{ background: "linear-gradient(135deg, #0f1f0f 0%, #0a1a2e 100%)" }}
+      >
+        <div>
+          <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#4ade80" }}>
+            Build · SaaS
+          </p>
+          <h1 className="text-3xl md:text-4xl font-bold" style={{ color: "var(--foreground)" }}>
+            From limited CRM to a scalable sales engine
+          </h1>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        {/* Main content */}
+        <div className="md:col-span-2 flex flex-col gap-8">
+
+          <section className="flex flex-col gap-3">
+            <h2 className="text-lg font-semibold" style={{ color: "var(--foreground)" }}>The challenge</h2>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
+              Younited had a CRM in place, but it was holding them back. As the platform grew —
+              connecting freelancers, clients, and intermediaries across the Netherlands —
+              their commercial tooling couldn&apos;t keep up. Automation was minimal, marketing
+              capabilities were too limited, and reporting gave leadership almost no visibility
+              into what was actually happening in the pipeline.
+            </p>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
+              They needed a system that could scale with their ambitions — not one they&apos;d
+              outgrow again in two years.
+            </p>
+          </section>
+
+          <section className="flex flex-col gap-3">
+            <h2 className="text-lg font-semibold" style={{ color: "var(--foreground)" }}>What we did</h2>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
+              We started by mapping Younited&apos;s commercial process end-to-end — understanding
+              how leads came in, how sales reps qualified them, and what happened after a deal
+              closed. From that blueprint, we designed the right HubSpot setup and migrated
+              everything across without disrupting an active sales pipeline.
+            </p>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
+              The new setup standardised how every sales rep worked, with a shared methodology
+              baked into the CRM rather than relying on individual habits. We built lead
+              qualification logic that stopped unqualified prospects from eating up the team&apos;s
+              time, and layered in marketing automation that finally gave the team real
+              campaign data.
+            </p>
+          </section>
+
+          <section className="flex flex-col gap-3">
+            <h2 className="text-lg font-semibold" style={{ color: "var(--foreground)" }}>The outcome</h2>
+            <ul className="flex flex-col gap-2">
+              {[
+                "Every sales rep works from the same methodology — no more individual CRM interpretations",
+                "Management gets real-time performance data for faster, sharper decisions",
+                "Lead qualification filters out wasted effort on buyers who aren&apos;t ready",
+                "Marketing automation running with full ROI tracking across campaigns",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm">
+                  <span style={{ color: "#4ade80" }} className="mt-0.5 shrink-0">✓</span>
+                  <span style={{ color: "var(--foreground)" }} dangerouslySetInnerHTML={{ __html: item }} />
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* Quote */}
+          <blockquote
+            className="rounded-2xl p-8"
+            style={{ backgroundColor: "var(--card)", border: "1px solid var(--border)" }}
+          >
+            <p className="text-base leading-relaxed mb-4" style={{ color: "var(--foreground)" }}>
+              &ldquo;Worked together with Levi on CRM setup. They demonstrated expertise, collaborative thinking, and professional knowledge!&rdquo;
+            </p>
+            <p className="text-sm" style={{ color: "var(--muted)" }}>— Younited team</p>
+          </blockquote>
+        </div>
+
+        {/* Sidebar */}
+        <aside className="flex flex-col gap-4">
+          {details.map((d) => (
+            <div
+              key={d.label}
+              className="rounded-2xl p-5"
+              style={{ backgroundColor: "var(--card)", border: "1px solid var(--border)" }}
+            >
+              <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--muted)" }}>
+                {d.label}
+              </p>
+              <p className="text-sm font-medium" style={{ color: "var(--foreground)" }}>
+                {d.value}
+              </p>
+            </div>
+          ))}
+
+          <Link
+            href="/contact"
+            className="mt-4 inline-flex items-center justify-center px-6 py-3.5 rounded-full text-sm font-medium transition-opacity hover:opacity-80 text-center"
+            style={{ backgroundColor: "var(--accent)", color: "#080808" }}
+          >
+            Work with me
+          </Link>
+        </aside>
+      </div>
+    </article>
+  );
+}
