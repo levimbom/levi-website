@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import NeuralCanvas from "@/components/ui/NeuralCanvas";
 
 export const metadata: Metadata = {
   title: "Appical — Levi Bom",
@@ -27,10 +28,18 @@ export default function AppicalCase() {
 
       {/* Hero block */}
       <div
-        className="rounded-3xl h-64 mb-12 flex items-end p-10"
-        style={{ background: "linear-gradient(135deg, #1a0f1f 0%, #0f1525 100%)" }}
+        className="rounded-3xl h-80 mb-12 relative overflow-hidden flex items-end p-10"
+        style={{ background: "linear-gradient(135deg, #0d060f 0%, #080f1a 100%)" }}
       >
-        <div>
+        <div className="absolute inset-0">
+          <NeuralCanvas accentColor="#a78bfa" accentRgb="167,139,250" className="w-full h-full" />
+        </div>
+        {/* Fade to bottom so text is readable */}
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(to top, rgba(8,6,10,0.9) 0%, transparent 60%)" }}
+        />
+        <div className="relative z-10">
           <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#a78bfa" }}>
             Process + Build · SaaS
           </p>

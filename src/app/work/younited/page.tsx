@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import NeuralCanvas from "@/components/ui/NeuralCanvas";
 
 export const metadata: Metadata = {
   title: "Younited — Levi Bom",
@@ -27,10 +28,18 @@ export default function YounitedCase() {
 
       {/* Hero block */}
       <div
-        className="rounded-3xl h-64 mb-12 flex items-end p-10"
-        style={{ background: "linear-gradient(135deg, #0f1f0f 0%, #0a1a2e 100%)" }}
+        className="rounded-3xl h-80 mb-12 relative overflow-hidden flex items-end p-10"
+        style={{ background: "linear-gradient(135deg, #060f06 0%, #060d1a 100%)" }}
       >
-        <div>
+        <div className="absolute inset-0">
+          <NeuralCanvas accentColor="#4ade80" accentRgb="74,222,128" className="w-full h-full" />
+        </div>
+        {/* Fade to bottom so text is readable */}
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(to top, rgba(6,9,6,0.9) 0%, transparent 60%)" }}
+        />
+        <div className="relative z-10">
           <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#4ade80" }}>
             Build · SaaS
           </p>

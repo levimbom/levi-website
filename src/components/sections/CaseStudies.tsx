@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NeuralCanvas from "@/components/ui/NeuralCanvas";
 
 export const cases = [
   {
@@ -11,8 +12,9 @@ export const cases = [
       "Younited was growing fast but their CRM couldn't keep up — no automation, weak reporting, and opportunity management that didn't scale. We migrated them to HubSpot and rebuilt the commercial process from the ground up.",
     result: "Sales team aligned on one methodology, real-time management reporting, and marketing automation with full ROI tracking.",
     quote: "They demonstrated expertise, collaborative thinking, and professional knowledge.",
-    gradient: "linear-gradient(135deg, #0f1f0f 0%, #0a1a2e 100%)",
+    gradient: "linear-gradient(135deg, #060f06 0%, #060d1a 100%)",
     accent: "#4ade80",
+    accentRgb: "74,222,128",
   },
   {
     slug: "appical",
@@ -24,8 +26,9 @@ export const cases = [
       "Years of leadership changes had left Appical's HubSpot in chaos — inconsistent processes, no structure, impossible to scale. We ran blueprint workshops to map the commercial reality, then rebuilt the entire portal around it.",
     result: "Complete portal restructure, zero downtime during transition, and clear workflows that finally give leadership visibility into the pipeline.",
     quote: "Sometimes you must dare to reset to grow. Appical now has the grip needed for tomorrow's ambitions.",
-    gradient: "linear-gradient(135deg, #1a0f1f 0%, #0f1525 100%)",
+    gradient: "linear-gradient(135deg, #0d060f 0%, #080f1a 100%)",
     accent: "#a78bfa",
+    accentRgb: "167,139,250",
   },
   {
     slug: "placeholder",
@@ -38,6 +41,7 @@ export const cases = [
     quote: "",
     gradient: "linear-gradient(135deg, #111 0%, #1a1a1a 100%)",
     accent: "var(--muted)",
+    accentRgb: "",
   },
 ];
 
@@ -76,11 +80,20 @@ export default function CaseStudies() {
             >
               {/* Visual block */}
               <div
-                className="h-36 flex items-end p-6"
+                className="h-36 relative overflow-hidden flex items-end p-6"
                 style={{ background: c.gradient }}
               >
+                {c.accentRgb && (
+                  <div className="absolute inset-0">
+                    <NeuralCanvas accentColor={c.accent} accentRgb={c.accentRgb} />
+                  </div>
+                )}
+                <div
+                  className="absolute inset-0"
+                  style={{ background: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 70%)" }}
+                />
                 <span
-                  className="text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full"
+                  className="relative z-10 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full"
                   style={{ backgroundColor: "rgba(255,255,255,0.08)", color: c.accent }}
                 >
                   {c.service}
