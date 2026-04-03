@@ -2,7 +2,6 @@ import Image from "next/image";
 
 const stats = [
   { value: "6", label: "Years in RevOps" },
-  { value: "20+", label: "Clients per year on average" },
   { value: "20+", label: "Integrations delivered" },
   { value: "8.5", label: "Average NPS score" },
 ];
@@ -67,7 +66,7 @@ export default function About() {
           </div>
 
           {/* Stats grid */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             {stats.map((s) => (
               <div
                 key={s.label}
