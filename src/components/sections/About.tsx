@@ -28,29 +28,13 @@ export default function About() {
           >
             I make commercial operations work.
           </h2>
-          <div className="flex flex-col gap-4 text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
+          <div className="flex flex-col gap-5 text-lg md:text-xl leading-relaxed" style={{ color: "var(--muted)" }}>
             <p>
-              I started out running a software sales company — which meant figuring
-              out pipeline management and when to pivot sales strategy the hard way,
-              in the trenches. That hands-on experience with what actually moves deals
-              forward shaped everything that came after.
+              I turn messy commercial operations into engines that actually scale.{" "}
+              <strong style={{ color: "var(--foreground)" }}>Clean data, tight processes, systems that grow with you</strong> — that&apos;s the work.
             </p>
             <p>
-              From there I joined Growth Tribe, where growth marketing and GTM strategy
-              became part of the daily conversation. I got obsessed with the question
-              of how commercial teams are built, not just how they sell.
-            </p>
-            <p>
-              RevOps was the natural destination — the place where sales, marketing,
-              and operations finally talk to each other. I combined everything I&apos;d
-              learned and started helping companies build the commercial infrastructure
-              that lets them actually accelerate: clean data, tight processes, and
-              systems that scale with the business.
-            </p>
-            <p>
-              My biggest strength is creating structure in chaos — finding the signal
-              in a messy commercial operation and designing something that makes sense
-              of it, fast.
+              Started in software sales (the trenches), learned GTM strategy at Growth Tribe, and landed in RevOps — where sales, marketing, and ops finally speak the same language. I&apos;ve been there ever since.
             </p>
             <p>
               Past clients include{" "}
@@ -59,10 +43,7 @@ export default function About() {
               <strong style={{ color: "var(--foreground)" }}>Younited</strong>,{" "}
               <strong style={{ color: "var(--foreground)" }}>Appical</strong>,{" "}
               <strong style={{ color: "var(--foreground)" }}>Blacksmith</strong>,{" "}
-              <strong style={{ color: "var(--foreground)" }}>GetShaman</strong>,{" "}
-              <strong style={{ color: "var(--foreground)" }}>Opticon</strong>,{" "}
-              <strong style={{ color: "var(--foreground)" }}>RVDB</strong>,{" "}
-              and many more across SaaS, manufacturing, and financial services.
+              and more across SaaS, manufacturing, and financial services.
             </p>
           </div>
         </div>
