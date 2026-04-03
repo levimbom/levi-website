@@ -1,6 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import NeuralCanvas from "@/components/ui/NeuralCanvas";
+import CaseMetrics from "@/components/ui/CaseMetrics";
+import BlueprintDiagram from "@/components/ui/BlueprintDiagram";
+
+const ACCENT = "#4ade80";
+const RGB = "74,222,128";
+
+const metrics = [
+  { value: "8", label: "Lifecycle stages defined" },
+  { value: "3", label: "Pipelines built" },
+  { value: "14", label: "Automated workflows" },
+  { value: "100%", label: "Team adoption in 2 weeks" },
+];
 
 export const metadata: Metadata = {
   title: "Younited — Levi Bom",
@@ -90,6 +102,9 @@ export default function YounitedCase() {
             </p>
           </section>
 
+          {/* Metrics */}
+          <CaseMetrics metrics={metrics} accent={ACCENT} accentRgb={RGB} />
+
           <section className="flex flex-col gap-3">
             <h2 className="text-lg font-semibold" style={{ color: "var(--foreground)" }}>What we did</h2>
             <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
@@ -106,6 +121,19 @@ export default function YounitedCase() {
               campaign data.
             </p>
           </section>
+
+          {/* Blueprint */}
+          <div>
+            <h2 className="text-lg font-semibold mb-4" style={{ color: "var(--foreground)" }}>Blueprint structure</h2>
+            <BlueprintDiagram
+              accent={ACCENT}
+              accentRgb={RGB}
+              stages={["Lead","Sales Prospect","Marketing Qualified","Sales Qualified","Opportunity","Landed Account","Committed","Churned"]}
+              pipelineLabel="New Business Pipeline"
+              pipelineStages={["Intro","Discovery","Proposal","Negotiation","Closed Won","Closed Lost"]}
+              objectLabel="Deal Object"
+            />
+          </div>
 
           <section className="flex flex-col gap-3">
             <h2 className="text-lg font-semibold" style={{ color: "var(--foreground)" }}>The outcome</h2>

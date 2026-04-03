@@ -1,6 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import NeuralCanvas from "@/components/ui/NeuralCanvas";
+import CaseMetrics from "@/components/ui/CaseMetrics";
+import BlueprintDiagram from "@/components/ui/BlueprintDiagram";
+
+const ACCENT = "#a78bfa";
+const RGB = "167,139,250";
+
+const metrics = [
+  { value: "6", label: "Blueprint workshops" },
+  { value: "2", label: "Pipelines restructured" },
+  { value: "0", label: "Downtime during migration" },
+  { value: "5 wks", label: "From kickoff to live" },
+];
 
 export const metadata: Metadata = {
   title: "Appical — Levi Bom",
@@ -89,6 +101,9 @@ export default function AppicalCase() {
             </p>
           </section>
 
+          {/* Metrics */}
+          <CaseMetrics metrics={metrics} accent={ACCENT} accentRgb={RGB} />
+
           <section className="flex flex-col gap-3">
             <h2 className="text-lg font-semibold" style={{ color: "var(--foreground)" }}>What we did</h2>
             <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
@@ -104,6 +119,19 @@ export default function AppicalCase() {
               to live sales activity throughout.
             </p>
           </section>
+
+          {/* Blueprint */}
+          <div>
+            <h2 className="text-lg font-semibold mb-4" style={{ color: "var(--foreground)" }}>Blueprint structure</h2>
+            <BlueprintDiagram
+              accent={ACCENT}
+              accentRgb={RGB}
+              stages={["Lead","Prospect","MQL","Onboarded User","SQL","Opportunity","Customer","Churned"]}
+              pipelineLabel="New Business Pipeline"
+              pipelineStages={["Qualified","Demo","Pilot","Commercial","Closed Won","Closed Lost"]}
+              objectLabel="Deal Object"
+            />
+          </div>
 
           <section className="flex flex-col gap-3">
             <h2 className="text-lg font-semibold" style={{ color: "var(--foreground)" }}>The outcome</h2>

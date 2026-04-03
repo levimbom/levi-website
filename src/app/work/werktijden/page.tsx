@@ -1,6 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import NeuralCanvas from "@/components/ui/NeuralCanvas";
+import CaseMetrics from "@/components/ui/CaseMetrics";
+import BlueprintDiagram from "@/components/ui/BlueprintDiagram";
+
+const ACCENT = "#fb923c";
+const RGB = "251,146,60";
+
+const metrics = [
+  { value: "7", label: "Lifecycle stages mapped" },
+  { value: "1", label: "Backend integration built" },
+  { value: "3", label: "Training sessions delivered" },
+  { value: "11", label: "Automated workflows" },
+];
 
 export const metadata: Metadata = {
   title: "Werktijden.nl — Levi Bom",
@@ -115,6 +127,9 @@ export default function WerktijdenCase() {
             </p>
           </section>
 
+          {/* Metrics */}
+          <CaseMetrics metrics={metrics} accent={ACCENT} accentRgb={RGB} />
+
           <section className="flex flex-col gap-3">
             <h2 className="text-lg font-semibold" style={{ color: "var(--foreground)" }}>Phase 1 — Process</h2>
             <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
@@ -160,6 +175,19 @@ export default function WerktijdenCase() {
               the first weeks of live usage to catch any friction and fix it fast.
             </p>
           </section>
+
+          {/* Blueprint */}
+          <div>
+            <h2 className="text-lg font-semibold mb-4" style={{ color: "var(--foreground)" }}>Blueprint structure</h2>
+            <BlueprintDiagram
+              accent={ACCENT}
+              accentRgb={RGB}
+              stages={["Trial","Activated","Sales Qualified","Demo","Opportunity","Customer","Expansion","Churned"]}
+              pipelineLabel="New Business Pipeline"
+              pipelineStages={["Trial Active","Demo Done","Proposal","Decision","Closed Won","Closed Lost"]}
+              objectLabel="Deal Object"
+            />
+          </div>
 
           <section className="flex flex-col gap-3">
             <h2 className="text-lg font-semibold" style={{ color: "var(--foreground)" }}>The outcome</h2>
