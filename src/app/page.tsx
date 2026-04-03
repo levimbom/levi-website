@@ -4,6 +4,7 @@ import Services from "@/components/sections/Services";
 import HowItWorks from "@/components/sections/HowItWorks";
 import CaseStudies from "@/components/sections/CaseStudies";
 import About from "@/components/sections/About";
+import GoodFit from "@/components/sections/GoodFit";
 import CTA from "@/components/sections/CTA";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <HowItWorks />
       <CaseStudies />
       <About />
+      <GoodFit />
       <CTA />
     </>
   );

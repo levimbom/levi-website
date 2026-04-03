@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const stats = [
   { value: "6", label: "Years in RevOps" },
-  { value: "20+", label: "Clients helped" },
-  { value: "2", label: "Industries: SaaS & Manufacturing" },
-  { value: "€5M+", label: "Min. client revenue" },
+  { value: "20+", label: "Clients per year on average" },
+  { value: "20+", label: "Integrations delivered" },
+  { value: "8.5", label: "Average NPS score" },
 ];
 
 export default function About() {
@@ -33,8 +33,8 @@ export default function About() {
             <p>
               I&apos;m Levi Bom, a RevOps and GTM specialist based in Amsterdam.
               For the past six years I&apos;ve been helping B2B companies — from
-              fast-growing SaaS startups to manufacturing businesses — build
-              commercial operations that actually support growth.
+              fast-growing SaaS startups to manufacturing businesses and financial
+              service providers — build commercial operations that actually support growth.
             </p>
             <p>
               My work sits at the intersection of strategy and execution. I
