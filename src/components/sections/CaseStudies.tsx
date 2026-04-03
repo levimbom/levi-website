@@ -81,7 +81,7 @@ export default function CaseStudies() {
             >
               {/* Visual block */}
               <div
-                className="h-44 relative overflow-hidden flex flex-col justify-between p-6"
+                className="h-44 relative overflow-hidden flex items-end p-6"
                 style={{ background: c.gradient }}
               >
                 {/* Neural canvas */}
@@ -97,39 +97,12 @@ export default function CaseStudies() {
                   style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)" }}
                 />
 
-                {/* Watermark name */}
-                <div
-                  className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none select-none"
-                  aria-hidden="true"
-                >
-                  <span
-                    className="font-black tracking-tighter leading-none whitespace-nowrap"
-                    style={{
-                      fontSize: "clamp(40px, 8vw, 72px)",
-                      background: `linear-gradient(135deg, rgba(${c.accentRgb || "255,255,255"},0.22) 0%, rgba(${c.accentRgb || "255,255,255"},0.05) 100%)`,
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                    }}
-                  >
-                    {c.client}
-                  </span>
-                </div>
-
-                {/* Service tag top */}
-                <span
-                  className="relative z-10 self-start text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full"
-                  style={{ backgroundColor: "rgba(255,255,255,0.08)", color: c.accent }}
-                >
-                  {c.service}
-                </span>
-
-                {/* Glowing company name bottom */}
+                {/* Glowing company name — bottom left */}
                 {c.accentRgb && (
                   <p
                     className="relative z-10 font-black tracking-tight leading-none lit-name"
                     style={{
-                      fontSize: "clamp(22px, 4vw, 28px)",
+                      fontSize: "clamp(20px, 3.5vw, 26px)",
                       color: c.accent,
                       ["--glow" as string]: c.accentRgb,
                     }}
