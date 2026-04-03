@@ -28,7 +28,7 @@ export default function WorkPage() {
           <Link
             key={c.slug}
             href={`/work/${c.slug}`}
-            className="rounded-2xl overflow-hidden flex flex-col group"
+            className="rounded-2xl overflow-hidden flex flex-col group card-hover"
             style={{ border: "1px solid var(--border)" }}
           >
             {/* Visual */}

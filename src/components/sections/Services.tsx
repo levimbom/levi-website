@@ -93,7 +93,7 @@ export default function Services() {
         {services.map((s) => (
           <div
             key={s.name}
-            className="rounded-2xl p-8 flex flex-col gap-6 relative"
+            className="rounded-2xl p-8 flex flex-col gap-6 relative card-hover"
             style={{
               backgroundColor: s.featured ? "var(--accent-dim)" : "var(--card)",
               border: s.featured

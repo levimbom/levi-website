@@ -76,7 +76,7 @@ export default function CaseStudies() {
           {visibleCases.map((c) => (
             <div
               key={c.slug}
-              className="rounded-2xl overflow-hidden flex flex-col"
+              className="rounded-2xl overflow-hidden flex flex-col card-hover"
               style={{ border: "1px solid var(--border)" }}
             >
               {/* Visual block */}

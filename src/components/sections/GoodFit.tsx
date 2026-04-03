@@ -62,7 +62,7 @@ export default function GoodFit() {
           {fits.map((f) => (
             <div
               key={f.label}
-              className="rounded-2xl p-6 flex flex-col gap-3"
+              className="rounded-2xl p-6 flex flex-col gap-3 card-hover"
               style={{
                 backgroundColor: "var(--card)",
                 border: "1px solid var(--border)",
