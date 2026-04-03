@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
+import AuroraBackground from "@/components/ui/AuroraBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,9 +39,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="min-h-screen flex flex-col antialiased">
-        <Nav />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <AuroraBackground />
+        <div className="relative z-10 flex flex-col min-h-screen">
+          <Nav />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
