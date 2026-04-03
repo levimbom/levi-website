@@ -81,25 +81,74 @@ export default function CaseStudies() {
             >
               {/* Visual block */}
               <div
-                className="h-36 relative overflow-hidden flex items-end p-6"
+                className="h-44 relative overflow-hidden flex flex-col justify-between p-6"
                 style={{ background: c.gradient }}
               >
+                {/* Neural canvas */}
                 {c.accentRgb && (
                   <div className="absolute inset-0">
                     <NeuralCanvas accentColor={c.accent} accentRgb={c.accentRgb} />
                   </div>
                 )}
+
+                {/* Bottom fade */}
                 <div
                   className="absolute inset-0"
-                  style={{ background: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 70%)" }}
+                  style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)" }}
                 />
+
+                {/* Watermark name */}
+                <div
+                  className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none select-none"
+                  aria-hidden="true"
+                >
+                  <span
+                    className="font-black tracking-tighter leading-none whitespace-nowrap"
+                    style={{
+                      fontSize: "clamp(40px, 8vw, 72px)",
+                      background: `linear-gradient(135deg, rgba(${c.accentRgb || "255,255,255"},0.22) 0%, rgba(${c.accentRgb || "255,255,255"},0.05) 100%)`,
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                    }}
+                  >
+                    {c.client}
+                  </span>
+                </div>
+
+                {/* Service tag top */}
                 <span
-                  className="relative z-10 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full"
+                  className="relative z-10 self-start text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full"
                   style={{ backgroundColor: "rgba(255,255,255,0.08)", color: c.accent }}
                 >
                   {c.service}
                 </span>
+
+                {/* Glowing company name bottom */}
+                {c.accentRgb && (
+                  <p
+                    className="relative z-10 font-black tracking-tight leading-none lit-name"
+                    style={{
+                      fontSize: "clamp(22px, 4vw, 28px)",
+                      color: c.accent,
+                      ["--glow" as string]: c.accentRgb,
+                    }}
+                  >
+                    {c.client}
+                  </p>
+                )}
               </div>
+
+              <style>{`
+                .lit-name {
+                  animation: litup 3s ease-in-out infinite;
+                  text-shadow: 0 0 20px rgba(var(--glow), 0.8), 0 0 60px rgba(var(--glow), 0.4);
+                }
+                @keyframes litup {
+                  0%, 100% { text-shadow: 0 0 20px rgba(var(--glow), 0.8), 0 0 60px rgba(var(--glow), 0.4); opacity: 1; }
+                  50%       { text-shadow: 0 0 40px rgba(var(--glow), 1),   0 0 100px rgba(var(--glow), 0.7), 0 0 160px rgba(var(--glow), 0.3); opacity: 0.85; }
+                }
+              `}</style>
 
               {/* Content */}
               <div className="p-6 flex flex-col gap-3 flex-1" style={{ backgroundColor: "var(--card)" }}>
