@@ -1,3 +1,5 @@
+import AnimatedBlueprint from "@/components/ui/AnimatedBlueprint";
+
 const steps = [
   {
     number: "01",
@@ -64,6 +66,9 @@ export default function HowItWorks() {
             </div>
           ))}
         </div>
+
+        {/* Animated Blueprint */}
+        <AnimatedBlueprint />
       </div>
     </section>
   );
